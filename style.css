@@ -336,3 +336,82 @@ body.menu-open .site-header { color: #fff; background: transparent; box-shadow: 
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ===== v3: multi-page additions ===== */
+[hidden] { display: none !important; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.nl { white-space: pre-line; }
+
+.nav a[aria-current="page"]::after { transform: scaleX(1); }
+.mobile-menu li a[aria-current="page"] { color: #e9c79b; }
+
+/* inner page banner */
+.hero.hero-page { min-height: clamp(330px, 50vh, 480px); }
+.hero-page .hero-inner { padding-top: calc(var(--header-h) + 44px); padding-bottom: clamp(36px, 6vw, 64px); }
+.hero-page h1 { font-size: clamp(2.3rem, 6vw, 4.4rem); max-width: 20ch; }
+.hero-page p.sub { margin: 18px 0 0; max-width: 62ch; }
+.hero-page .eyebrow:empty { display: none; }
+.hero-page::before { background: linear-gradient(180deg, rgba(24, 18, 12, 0.55) 0%, rgba(24, 18, 12, 0.25) 45%, rgba(24, 18, 12, 0.8) 100%); }
+
+/* home teasers */
+.more { margin-top: clamp(28px, 4vw, 44px); }
+.room-grid.cols-3 { grid-template-columns: 1fr; }
+.rooms .more .btn-line { background: transparent; }
+.gallery .more .btn-ghost { display: inline-flex; }
+.cta-band { background: var(--forest); color: #f4efe4; padding: clamp(48px, 7vw, 84px) 0; }
+.cta-inner { display: grid; gap: 28px; align-items: center; }
+.cta-band .h2 { font-size: clamp(2rem, 4vw, 3rem); }
+.cta-band p { margin: 14px 0 0; color: rgba(244, 239, 228, 0.82); max-width: 52ch; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.cta-band .btn-ghost { border-color: rgba(255, 255, 255, 0.6); }
+
+/* price list rows */
+.price-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 20px; }
+.pl-main { display: flex; flex-direction: column; flex: 1 1 14rem; min-width: 0; }
+.pl-main b { font-weight: 700; color: #fff; }
+.pl-main span { font-size: 0.9rem; color: rgba(244, 239, 228, 0.76); }
+.pl-price { font-weight: 700; color: #e9c79b; text-align: right; margin-left: auto; }
+.pricing .price-card .eyebrow:empty { display: none; }
+.price-big { margin: 0; }
+.price-big small { display: block; margin: 16px 0 0; }
+.price-big .from { display: none; }
+
+/* gallery page */
+.gallery-page { padding-top: clamp(48px, 7vw, 88px); }
+
+/* how list */
+.how-static { margin-top: 0; }
+.how-static li { border-top: 0; }
+
+/* form */
+.field-err { color: #b3261e; font-size: 0.82rem; line-height: 1.35; }
+.field-err:empty { display: none; }
+.form-hint { margin: 0; font-size: 0.85rem; color: var(--bark-soft); }
+.form-hint a { overflow-wrap: anywhere; }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: #b3261e; }
+.contact .c-list { margin-top: 24px; }
+
+@media (min-width: 960px) {
+  .room-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .room-grid.room-rows { grid-template-columns: 1fr; gap: 28px; }
+  .room-rows .room-card { display: grid; grid-template-columns: 1.05fr 1fr; }
+  .room-rows .room-card .ph { aspect-ratio: auto; height: 100%; min-height: 340px; }
+  .room-rows .room-card .ph img { position: absolute; inset: 0; }
+  .room-rows .chips { margin-top: 6px; }
+  .room-rows .room-card:nth-child(even) .ph { order: 2; }
+  .room-rows .room-body { justify-content: center; padding: 40px 48px; }
+  .room-rows .room-body h3 { font-size: 2.3rem; }
+  .cta-inner { grid-template-columns: 1.3fr 1fr; }
+  .cta-actions { justify-content: flex-end; }
+}
+@media (max-width: 380px) {
+  .hero-page h1 { font-size: 2.1rem; }
+  .cta-actions .btn { width: 100%; }
+}
+
+/* gallery page: light CTA band so it does not merge with the green gallery */
+.gallery-page { padding-bottom: clamp(48px, 7vw, 84px); }
+.gallery-page + .cta-band { background: var(--cream); color: var(--bark); }
+.gallery-page + .cta-band p { color: var(--bark-soft); }
+.gallery-page + .cta-band .btn-ghost { border-color: var(--forest); color: var(--forest); }
+.gallery-page + .cta-band .btn-ghost:hover { background: var(--forest); color: #fff; }

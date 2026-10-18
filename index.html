@@ -12,7 +12,7 @@
 <meta property="og:locale" content="pl_PL">
 <meta property="og:site_name" content="Dom w górach">
 <meta property="og:title" content="Dom w górach, Świeradów-Zdrój">
-<meta property="og:description" content="Dom na zboczu, tuż przy lesie i szlakach Gór Izerskich. Do 15 osób, kominek, ogród, parking.">
+<meta property="og:description" content="Dom w górach w Świeradowie-Zdroju: dom na zboczu, tuż przy lesie i szlakach Gór Izerskich. Do 15 osób, kominek, ogród z miejscem na grilla, parking. Zapytaj o wolny termin.">
 <meta property="og:image" content="https://vasylian.com/dom-w-gorach/img/widok-wzgorza.webp">
 <meta property="og:image:alt" content="Zalesione zbocza górskie w ciepłym świetle">
 <meta name="twitter:card" content="summary_large_image">
@@ -51,369 +51,139 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Dom w górach, strona główna">
+    <a class="brand" href="index.html" aria-label="Dom w górach, strona główna">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 26 11 10l5 8 3-4 11 12z" fill="currentColor" opacity=".9"/><path d="M13 26v-6h6v6z" fill="#a8622f"/></svg>
       <span>Dom w górach</span>
     </a>
     <nav class="nav" aria-label="Główna nawigacja">
-      <ul>
-        <li><a href="#o-nas">O domu</a></li>
-        <li><a href="#pokoje">Pokoje</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#udogodnienia">Udogodnienia</a></li>
-        <li><a href="#okolica">Okolica</a></li>
-        <li><a href="#cennik">Cennik</a></li>
-        <li><a href="#dojazd">Dojazd</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
+      <ul><li><a href="index.html" aria-current="page">Start</a></li><li><a href="pokoje.html">Pokoje</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="cennik.html">Cennik</a></li><li><a href="dojazd.html">Dojazd</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary btn-sm header-cta" href="#kontakt">Zapytaj o wolny termin</a>
+      <a class="btn btn-primary btn-sm header-cta" href="kontakt.html">Zapytaj o wolny termin</a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Otwórz menu"><span></span></button>
     </div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobile-menu" aria-label="Menu">
-  <ul>
-    <li><a href="#o-nas">O domu</a></li>
-    <li><a href="#pokoje">Pokoje</a></li>
-    <li><a href="#galeria">Galeria</a></li>
-    <li><a href="#udogodnienia">Udogodnienia</a></li>
-    <li><a href="#okolica">Okolica</a></li>
-    <li><a href="#cennik">Cennik</a></li>
-    <li><a href="#dojazd">Dojazd</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
-  </ul>
-  <a class="btn btn-primary" href="#kontakt">Zapytaj o wolny termin</a>
-  <p class="m-contact">tel. <a href="tel:+48572504297">572 504 297</a><br>dom.wgorach.swieradow@gmail.com</p>
+  <ul><li><a href="index.html" aria-current="page">Start</a></li><li><a href="pokoje.html">Pokoje</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="cennik.html">Cennik</a></li><li><a href="dojazd.html">Dojazd</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+  <a class="btn btn-primary" href="kontakt.html">Zapytaj o wolny termin</a>
+  <p class="m-contact">tel. <a href="tel:+48572504297" data-tel data-t="telefon">572 504 297</a><br><a href="mailto:dom.wgorach.swieradow@gmail.com" data-mail data-t="email">dom.wgorach.swieradow@gmail.com</a></p>
 </div>
 
 <main id="tresc">
 
-<!-- 1. HERO -->
 <section class="hero" id="top" aria-labelledby="hero-h">
   <div class="hero-media" aria-hidden="true">
-    <img src="img/widok-wzgorza.webp" alt="" data-fade fetchpriority="high" width="1000" height="572">
+    <img src="img/widok-wzgorza.webp" alt="" data-img="hero_foto" data-fade fetchpriority="high" width="1000" height="572">
   </div>
   <div class="wrap hero-inner">
-    <span class="eyebrow">Świeradów-Zdrój, Góry Izerskie</span>
-    <h1 id="hero-h">Dom na zboczu, <em>tuż przy lesie</em></h1>
-    <p class="sub">Dom do wynajęcia dla rodzin i grup przyjaciół: kominek, duża kuchnia, ogród z miejscem do grillowania, a w sąsiedztwie szlaki piesze i rowerowe.</p>
+    <span class="eyebrow" data-t="hero_eyebrow">Świeradów-Zdrój, Góry Izerskie</span>
+    <h1 id="hero-h"><span data-t="hero_title">Dom na zboczu,</span> <em data-t="hero_title_em">tuż przy lesie</em></h1>
+    <p class="sub" data-t="hero_text">Dom do wynajęcia dla rodzin i grup przyjaciół: kominek, duża kuchnia, ogród z miejscem do grillowania, a w sąsiedztwie szlaki piesze i rowerowe.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#kontakt">Zapytaj o wolny termin</a>
-      <a class="btn btn-ghost" href="#galeria">Zobacz zdjęcia</a>
+      <a class="btn btn-primary" href="kontakt.html">Zapytaj o wolny termin</a>
+      <a class="btn btn-ghost" href="galeria.html">Zobacz zdjęcia</a>
     </div>
     <ul class="hero-facts" aria-label="Najważniejsze informacje">
-      <li><b>do 15</b><span>osób w domu</span></li>
-      <li><b>ok. 215 m²</b><span>powierzchni</span></li>
-      <li><b>ok. 300 m</b><span>do wieży Sky Walk</span></li>
-      <li><b>od 75 zł</b><span>za osobę za dobę</span></li>
+      <li><b data-t="fakt1_wartosc">do 15</b><span data-t="fakt1_opis">osób w domu</span></li>
+      <li><b data-t="fakt2_wartosc">ok. 215 m²</b><span data-t="fakt2_opis">powierzchni</span></li>
+      <li><b data-t="fakt3_wartosc">ok. 300 m</b><span data-t="fakt3_opis">do wieży Sky Walk</span></li>
+      <li><b data-price-main="price">od 75 zł</b><span data-price-main="note">za osobę za dobę</span></li>
     </ul>
   </div>
 </section>
 
-<!-- 2. O NAS -->
 <section class="about" id="o-nas" aria-labelledby="about-h">
   <div class="wrap about-grid">
     <div class="about-media reveal">
       <div class="ph about-photo">
-        <img src="img/dom-od-ogrodu.webp" alt="Dom od strony ogrodu: biały dom z kamiennym murkiem i zielonym trawnikiem" data-fade loading="lazy" width="733" height="550" style="object-position: 40% 50%">
+        <img src="img/dom-od-ogrodu.webp" alt="Dom od strony ogrodu: biały dom z kamiennym murkiem i zielonym trawnikiem" data-img="o_domu_foto" data-fade loading="lazy" width="733" height="550" style="object-position: 40% 50%">
       </div>
       <div class="ph about-photo2">
-        <img src="img/pokoj-z-piecem-1.webp" alt="Pokój z piecem kominkowym i dużym oknem" data-fade loading="lazy" width="733" height="550">
+        <img src="img/pokoj-z-piecem-1.webp" alt="Pokój z piecem kominkowym i dużym oknem" data-img="o_domu_foto2" data-fade loading="lazy" width="733" height="550">
       </div>
     </div>
     <div class="reveal">
       <span class="eyebrow">O domu</span>
-      <h2 class="h2" id="about-h">Dom, w którym całe towarzystwo mieści się pod jednym dachem</h2>
-      <p class="lead" style="margin-top:22px">Dom pomyślany jako miejsce wypoczynku dla grup, czyli dwóch lub trzech rodzin albo przyjaciół, a także dla gości, którzy wolą wypocząć w mniejszym gronie. Stoi na zboczu, w sąsiedztwie lasu, z dala od ruchu samochodowego.</p>
-      <ul class="facts">
-        <li><b>Dom</b><span>około 215 m², parter i piętro, łóżka dla maksymalnie 15 osób</span></li>
-        <li><b>Spokój</b><span>zbocze przy lesie, z dala od ruchu samochodowego, dobre miejsce także na pobyt z dziećmi</span></li>
-        <li><b>Szlaki</b><span>szlaki turystyczne i ścieżki rowerowe Singletrack w sąsiedztwie domu</span></li>
-        <li><b>Opieka</b><span>domem opiekuje się gospodarz, który mieszka na parterze i w razie potrzeby można go poprosić o pomoc</span></li>
-        <li><b>Zwierzęta</b><span>akceptujemy zwierzęta, za pobyt z pupilem pobieramy jednorazową opłatę ustalaną indywidualnie</span></li>
-      </ul>
+      <h2 class="h2" id="about-h" data-t="o_domu_tytul">Dom, w którym całe towarzystwo mieści się pod jednym dachem</h2>
+      <p class="lead" style="margin-top:22px" data-t="o_domu_tekst">Dom pomyślany jako miejsce wypoczynku dla grup, czyli dwóch lub trzech rodzin albo przyjaciół, a także dla gości, którzy wolą wypocząć w mniejszym gronie. Stoi na zboczu, w sąsiedztwie lasu, z dala od ruchu samochodowego.</p>
+      <ul class="facts" data-list-t="cecha" data-kind="pair"><li><b>Dom</b><span>około 215 m², parter i piętro, łóżka dla maksymalnie 15 osób</span></li><li><b>Spokój</b><span>zbocze przy lesie, z dala od ruchu samochodowego, dobre miejsce także na pobyt z dziećmi</span></li><li><b>Szlaki</b><span>szlaki turystyczne i ścieżki rowerowe Singletrack w sąsiedztwie domu</span></li><li><b>Opieka</b><span>domem opiekuje się gospodarz, który mieszka na parterze i w razie potrzeby można go poprosić o pomoc</span></li><li><b>Zwierzęta</b><span>akceptujemy zwierzęta, za pobyt z pupilem pobieramy jednorazową opłatę ustalaną indywidualnie</span></li></ul>
     </div>
   </div>
 </section>
 
-<!-- 3. POKOJE -->
-<section class="rooms" id="pokoje" aria-labelledby="rooms-h">
+<section class="rooms" aria-labelledby="rooms-h">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Pokoje i przestrzenie</span>
-      <h2 class="h2" id="rooms-h">Cztery pokoje na piętrze, salon z kominkiem i duża kuchnia</h2>
-      <p class="lead">Dom jest przeznaczony dla grup. Na parterze jest salon z kominkiem, w którym opcjonalnie można urządzić dodatkowe trzy miejsca noclegowe. Jeśli nie potrzebują Państwo całego domu, prosimy zapytać o wynajem pojedynczych pokoi.</p>
+      <h2 class="h2" id="rooms-h">Gdzie będą spać goście</h2>
     </div>
-    <div class="room-grid">
-      <article class="room-card reveal">
-        <div class="ph"><img src="img/sypialnia-1.webp" alt="Jasna sypialnia z drewnianym łóżkiem i oknem dachowym" data-fade loading="lazy" width="728" height="550"></div>
-        <div class="room-body">
-          <h3>Pokoje na piętrze</h3>
-          <p>Na piętrze są cztery jasne, przestronne pokoje trzyosobowe. Wspólna łazienka jest dostępna z korytarza.</p>
-          <ul class="chips"><li>4 pokoje</li><li>po 3 osoby</li><li>łazienka z korytarza</li></ul>
-        </div>
-      </article>
-      <article class="room-card reveal">
-        <div class="ph"><img src="img/pokoj-z-piecem-1.webp" alt="Pokój z piecem kominkowym, drewnianą podłogą i dużym oknem" data-fade loading="lazy" width="733" height="550"></div>
-        <div class="room-body">
-          <h3>Pokój z kominkiem</h3>
-          <p>Jeden z pokoi na piętrze ma kominek i prywatną łazienkę z dużą wanną. Goście rozpalają kominek sami, zgodnie z instrukcją.</p>
-          <ul class="chips"><li>kominek</li><li>prywatna łazienka</li><li>wanna</li></ul>
-        </div>
-      </article>
-      <article class="room-card reveal">
-        <div class="ph"><img src="img/kuchnia.webp" alt="Przestronna kuchnia z dużym drewnianym stołem" data-fade loading="lazy" width="733" height="484"></div>
-        <div class="room-body">
-          <h3>Kuchnia i jadalnia</h3>
-          <p>Na parterze jest w pełni wyposażona, przestronna kuchnia o powierzchni około 20 m² z dużym stołem. Można w niej samodzielnie przygotowywać posiłki.</p>
-          <ul class="chips"><li>ok. 20 m²</li><li>pełne wyposażenie</li><li>duży stół</li></ul>
-        </div>
-      </article>
-      <article class="room-card reveal">
-        <div class="ph"><img src="img/lazienka-wanna.webp" alt="Łazienka z dużą narożną wanną" data-fade loading="lazy" width="413" height="550" style="object-position: 50% 62%"></div>
-        <div class="room-body">
-          <h3>Łazienki</h3>
-          <p>Na parterze jest łazienka z prysznicem, na piętrze łazienka dostępna z korytarza, a przy pokoju z kominkiem prywatna łazienka z wanną.</p>
-          <ul class="chips"><li>prysznic na parterze</li><li>łazienka na piętrze</li><li>wanna</li></ul>
-        </div>
-      </article>
-    </div>
+    <div class="room-grid cols-3" data-list="rooms" data-limit="3"><article class="room-card reveal"><div class="ph"><img src="img/sypialnia-1.webp" alt="Jasna sypialnia z drewnianym łóżkiem i oknem dachowym" data-fade loading="lazy" width="728" height="550"></div><div class="room-body"><h3>Pokoje na piętrze</h3><p>Na piętrze są cztery jasne, przestronne pokoje trzyosobowe. Wspólna łazienka jest dostępna z korytarza.</p><ul class="chips"><li>4 pokoje</li><li>po 3 osoby</li><li>łazienka z korytarza</li></ul></div></article><article class="room-card reveal"><div class="ph"><img src="img/pokoj-z-piecem-1.webp" alt="Pokój z piecem kominkowym, drewnianą podłogą i dużym oknem" data-fade loading="lazy" width="733" height="550"></div><div class="room-body"><h3>Pokój z kominkiem</h3><p>Jeden z pokoi na piętrze ma kominek i prywatną łazienkę z dużą wanną. Goście rozpalają kominek sami, zgodnie z instrukcją.</p><ul class="chips"><li>kominek</li><li>prywatna łazienka</li><li>wanna</li></ul></div></article><article class="room-card reveal"><div class="ph"><img src="img/kuchnia.webp" alt="Przestronna kuchnia z dużym drewnianym stołem" data-fade loading="lazy" width="733" height="484"></div><div class="room-body"><h3>Kuchnia i jadalnia</h3><p>Na parterze jest w pełni wyposażona, przestronna kuchnia o powierzchni około 20 m² z dużym stołem. Można w niej samodzielnie przygotowywać posiłki.</p><ul class="chips"><li>ok. 20 m²</li><li>pełne wyposażenie</li><li>duży stół</li></ul></div></article></div>
+    <p class="more"><a class="btn btn-line" href="pokoje.html">Wszystkie pokoje i udogodnienia</a></p>
   </div>
 </section>
 
-<!-- 4. GALERIA -->
-<section class="gallery" id="galeria" aria-labelledby="gal-h">
+<section class="gallery" aria-labelledby="gal-h">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Galeria</span>
       <h2 class="h2" id="gal-h">Zajrzyjmy do środka</h2>
-      <p class="lead">Dom, wnętrza i okolica. Kliknięcie otwiera zdjęcie w większym rozmiarze.</p>
     </div>
-    <div class="g-grid" role="list">
-      <button class="g-item reveal big" role="listitem" type="button" data-lightbox data-full="img/dom-od-ogrodu.webp" data-alt="Dom od strony ogrodu"><span class="ph"><img src="img/dom-od-ogrodu.webp" alt="Dom od strony ogrodu: biały dom z kamiennym murkiem" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/sypialnia-1.webp" data-alt="Jasna sypialnia z oknem dachowym"><span class="ph"><img src="img/sypialnia-1.webp" alt="Jasna sypialnia z oknem dachowym" data-fade loading="lazy" width="728" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/pokoj-z-piecem-1.webp" data-alt="Pokój z piecem kominkowym"><span class="ph"><img src="img/pokoj-z-piecem-1.webp" alt="Pokój z piecem kominkowym i dużym oknem" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/schody.webp" data-alt="Drewniane schody na piętro"><span class="ph"><img src="img/schody.webp" alt="Drewniane schody prowadzące na piętro" data-fade loading="lazy" width="722" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/dom-front.webp" data-alt="Front domu wśród drzew"><span class="ph"><img src="img/dom-front.webp" alt="Front domu wśród drzew" data-fade loading="lazy" width="580" height="435"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/pokoj-turkusowy.webp" data-alt="Pokój z turkusową ścianą"><span class="ph"><img src="img/pokoj-turkusowy.webp" alt="Pokój z turkusową ścianą i dużym oknem" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/laka-latem.webp" data-alt="Łąka z drewnianym płotem"><span class="ph"><img src="img/laka-latem.webp" alt="Łąka z drewnianym płotem i chmurami nad lasem" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/pokoj-z-piecem-2.webp" data-alt="Piec kominkowy i zapas drewna"><span class="ph"><img src="img/pokoj-z-piecem-2.webp" alt="Piec kominkowy i zapas drewna w pokoju" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/lazienka-wanna.webp" data-alt="Łazienka z narożną wanną"><span class="ph"><img src="img/lazienka-wanna.webp" alt="Łazienka z narożną wanną" data-fade loading="lazy" width="413" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/sypialnia-2.webp" data-alt="Sypialnia na piętrze"><span class="ph"><img src="img/sypialnia-2.webp" alt="Sypialnia na piętrze z dwuosobowym łóżkiem" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/zima-droga.webp" data-alt="Zimowa droga pod błękitnym niebem"><span class="ph"><img src="img/zima-droga.webp" alt="Zimowa droga pod błękitnym niebem" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/zima-las.webp" data-alt="Zaśnieżona leśna droga"><span class="ph"><img src="img/zima-las.webp" alt="Zaśnieżona leśna droga między oszronionymi drzewami" data-fade loading="lazy" width="733" height="550"></span></button>
-      <button class="g-item reveal" role="listitem" type="button" data-lightbox data-full="img/pokoj-z-piecem-3.webp" data-alt="Pokój z piecem i fotelem"><span class="ph"><img src="img/pokoj-z-piecem-3.webp" alt="Pokój z piecem i skórzanym fotelem" data-fade loading="lazy" width="733" height="550"></span></button>
-    </div>
+    <div class="g-grid" data-list="gallery" data-limit="5" data-big="1"><button class="g-item reveal big" type="button" data-lightbox data-full="img/dom-od-ogrodu.webp" data-alt="Dom od strony ogrodu"><span class="ph"><img src="img/dom-od-ogrodu.webp" alt="Dom od strony ogrodu" data-fade loading="lazy" width="733" height="550"></span></button><button class="g-item reveal" type="button" data-lightbox data-full="img/sypialnia-1.webp" data-alt="Jasna sypialnia z oknem dachowym"><span class="ph"><img src="img/sypialnia-1.webp" alt="Jasna sypialnia z oknem dachowym" data-fade loading="lazy" width="728" height="550"></span></button><button class="g-item reveal" type="button" data-lightbox data-full="img/pokoj-z-piecem-1.webp" data-alt="Pokój z piecem kominkowym"><span class="ph"><img src="img/pokoj-z-piecem-1.webp" alt="Pokój z piecem kominkowym" data-fade loading="lazy" width="733" height="550"></span></button><button class="g-item reveal" type="button" data-lightbox data-full="img/schody.webp" data-alt="Drewniane schody na piętro"><span class="ph"><img src="img/schody.webp" alt="Drewniane schody na piętro" data-fade loading="lazy" width="722" height="550"></span></button><button class="g-item reveal" type="button" data-lightbox data-full="img/dom-front.webp" data-alt="Front domu wśród drzew"><span class="ph"><img src="img/dom-front.webp" alt="Front domu wśród drzew" data-fade loading="lazy" width="580" height="435"></span></button></div>
+    <p class="more"><a class="btn btn-ghost" href="galeria.html">Cała galeria</a></p>
   </div>
 </section>
 
-<!-- 5. UDOGODNIENIA -->
-<section class="amenities" id="udogodnienia" aria-labelledby="am-h">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Udogodnienia</span>
-      <h2 class="h2" id="am-h">Wszystko, czego potrzeba na wspólny pobyt</h2>
-    </div>
-    <div class="am-grid">
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4c1 4 6 7 6 13a6 6 0 0 1-12 0c0-3 2-4 3-7 1 1 2 2 2 4 1-3 1-6 1-10z"/><path d="M6 28h20"/></svg>
-        <div><h3>Kominki</h3><p>Salon z kominkiem na parterze oraz kominek w jednym z pokoi na piętrze.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="22" height="24" rx="2"/><path d="M5 13h22M10 8h.01M14 8h.01M11 18h10v6H11z"/></svg>
-        <div><h3>W pełni wyposażona kuchnia</h3><p>Przestronna kuchnia na parterze z dużym stołem, w której można samodzielnie przygotować posiłki.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 27V13a9 9 0 0 1 18 0v14"/><path d="M7 27h18M12 13h5a3 3 0 0 1 0 6h-5z"/></svg>
-        <div><h3>Parking</h3><p>Parking na ogrodzonej posesji.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 28V16M16 16c-5 0-8-3-8-9 6 0 8 3 8 9zm0 3c4 0 7-2 7-7-5 0-7 2-7 7z"/><path d="M6 28h20"/></svg>
-        <div><h3>Ogród i miejsce na grilla</h3><p>Ogrodzona posesja z ogrodem i miejscem do grillowania.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h18a6 6 0 0 1 0 12H4zM8 12V8m5 4V8M4 24v3m18-3v3"/></svg>
-        <div><h3>Łazienki</h3><p>Prysznic na parterze, prywatna łazienka przy pokoju z kominkiem oraz łazienka dostępna z korytarza na piętrze.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6v8a3 3 0 0 0 6 0V6M13 6v20M22 6c-3 2-3 8 0 10v10"/></svg>
-        <div><h3>Śniadania i obiadokolacje</h3><p>Śniadania i obiadokolacje można wykupić po wcześniejszym ustaleniu.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="2.5"/><circle cx="15" cy="8" r="2.5"/><circle cx="21" cy="12" r="2.5"/><path d="M8 23c0-4 4-7 8-7s8 3 8 7c0 2-2 3-4 3-2 0-2-1-4-1s-2 1-4 1c-2 0-4-1-4-3z"/></svg>
-        <div><h3>Zwierzęta akceptowane</h3><p>Prosimy o sprzątanie po pupilach i niewpuszczanie ich na łóżka i fotele. Za pobyt ze zwierzęciem pobieramy jednorazową opłatę ustalaną indywidualnie.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="16" r="5"/><path d="M16 16h12M24 16v5M20 16v3"/></svg>
-        <div><h3>Gospodarz na miejscu</h3><p>W domu mieszka gospodarz, którego można poprosić o pomoc. Właściciele nie są obecni w trakcie pobytu gości.</p></div>
-      </div>
-      <div class="am-item reveal">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4 5 26h22z"/><path d="M12 19c2-1 3 1 4 0s2-1 4 0"/></svg>
-        <div><h3>Szlaki w sąsiedztwie</h3><p>Dom stoi przy lesie, w sąsiedztwie szlaków turystycznych i ścieżek rowerowych Singletrack.</p></div>
-      </div>
-    </div>
-    <div class="house-rules reveal">
-      <h3>Zasady domu</h3>
-      <ul>
-        <li>W domu obowiązuje całkowity zakaz palenia tytoniu, zainstalowane są czujniki dymu.</li>
-        <li>Cisza nocna obowiązuje w godzinach 22:00 do 06:00.</li>
-        <li>Prosimy o zapoznanie się z instrukcją palenia w kominku. Zimą sień nie jest ogrzewana.</li>
-        <li>Przy wynajmie pojedynczych pokoi prosimy o uwzględnienie potrzeb innych gości w kuchni i łazience.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 6. OKOLICA -->
-<section class="around" id="okolica" aria-labelledby="ar-h">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Okolica</span>
-      <h2 class="h2" id="ar-h">Uzdrowisko u stóp Gór Izerskich</h2>
-      <p class="lead">Świeradów-Zdrój wraz z Czerniawą to uzdrowisko znane z kąpieli borowinowych i wód radoczynnych, a zarazem dobre miejsce na wypoczynek latem i zimą.</p>
-    </div>
-    <div class="around-grid">
-      <div class="reveal">
-        <ul class="dist">
-          <li><span class="name">Wieża widokowa Sky Walk<small>Świeradów-Zdrój</small></span><span class="km">ok. 300 m</span></li>
-          <li><span class="name">Aquapark<small>Świeradów-Zdrój</small></span><span class="km">ok. 500 m</span></li>
-          <li><span class="name">Dom Zdrojowy i Park Zdrojowy<small>Zabytkowy Dom Zdrojowy z 1899 roku</small></span><span class="km">ok. 0,9 km</span></li>
-          <li><span class="name">Dolna stacja kolei gondolowej<small>Ski &amp; Sun, kolej gondolowa na Stóg Izerski</small></span><span class="km">ok. 1,9 km</span></li>
-          <li><span class="name">Zamek Czocha w Leśnej<small>nad zalewem z plażą i wypożyczalnią sprzętu pływającego</small></span><span class="km">ok. 15 km</span></li>
-        </ul>
-        <p class="dist-note">Odległości orientacyjne, w linii prostej.</p>
-        <figure class="zdroj">
-          <div class="ph" style="aspect-ratio:16/10"><img src="img/dom-zdrojowy.webp" alt="Dom Zdrojowy w Świeradowie-Zdroju z wieżą zegarową" data-fade loading="lazy" width="413" height="550" style="object-position:50% 22%"></div>
-          <figcaption>Dom Zdrojowy w Świeradowie-Zdroju</figcaption>
-        </figure>
-        <p class="czech">Blisko jest także do Czech: do Pragi, Skalnego Miasta, aquaparku i kina 3D w Libercu oraz zamku we Frydlancie.</p>
-      </div>
-      <div class="seasons">
-        <article class="season reveal">
-          <div class="ph" style="aspect-ratio:16/9;margin-bottom:22px"><img src="img/laka-latem.webp" alt="Łąka z drewnianym płotem i lasem w tle" data-fade loading="lazy" width="733" height="550" style="object-position:50% 60%"></div>
-          <h3>Lato</h3>
-          <p>Szlaki rowerowe i turystyczne w Górach Izerskich, lasy pełne grzybów i jagód, a do tego uzdrowiskowe kąpiele borowinowe i wody mineralne. We wrześniu słychać rykowisko jeleni, czasem nawet w domu.</p>
-        </article>
-        <article class="season winter reveal">
-          <div class="ph" style="aspect-ratio:16/9;margin-bottom:22px"><img src="img/zima-droga.webp" alt="Zimowa droga pod błękitnym niebem" data-fade loading="lazy" width="733" height="550" style="object-position:50% 55%"></div>
-          <h3>Zima</h3>
-          <p>Trasy zjazdowe z koleją gondolową oraz trasy biegowe na miejscu i w niedalekich Jakuszycach.</p>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. CENNIK -->
-<section class="pricing" id="cennik" aria-labelledby="pr-h">
+<section class="pricing" aria-labelledby="pr-h">
   <div class="wrap">
     <div class="price-card reveal">
       <div>
         <span class="eyebrow">Cennik</span>
         <h2 class="h2" id="pr-h">Ile kosztuje pobyt</h2>
-        <p class="price-big" style="margin-top:28px"><span class="from">od</span> 75 zł<small>za osobę za dobę</small></p>
-        <a class="btn btn-primary" href="#kontakt" style="margin-top:28px">Zapytaj o termin i cenę</a>
+        <p class="price-big" style="margin-top:28px"><span data-price-main="price">od 75 zł</span><small data-price-main="note">za osobę za dobę</small></p>
+        <a class="btn btn-primary" href="cennik.html" style="margin-top:28px">Zobacz cały cennik</a>
       </div>
       <div>
-        <ul class="price-list">
-          <li>Długie weekendy, wakacje i ferie zimowe: czas wynajmu i ceny ustalamy indywidualnie.</li>
-          <li>Dla grup oraz przy pobycie powyżej 3 dni możliwe jest negocjowanie ceny.</li>
-          <li>Opłata uzdrowiskowa jest pobierana w imieniu miasta i liczona osobno, za osobę za dobę.</li>
-          <li>Śniadania i obiadokolacje możliwe po wcześniejszym ustaleniu.</li>
-        </ul>
-        <p class="price-foot">Cena jest orientacyjna. Aktualną cenę potwierdzamy po ustaleniu terminu i liczby osób.</p>
+        <ul class="price-list" data-list="cennik" data-limit="3"><li><span class="pl-main"><b>Długie weekendy, wakacje i ferie zimowe</b><span>Czas wynajmu i ceny ustalamy indywidualnie.</span></span><span class="pl-price">indywidualnie</span></li><li><span class="pl-main"><b>Grupy oraz pobyt powyżej 3 dni</b><span>Możliwe jest negocjowanie ceny.</span></span><span class="pl-price">do uzgodnienia</span></li><li><span class="pl-main"><b>Opłata uzdrowiskowa</b><span>Pobierana w imieniu miasta, liczona za osobę za dobę.</span></span><span class="pl-price">naliczana osobno</span></li></ul>
+        <p class="price-foot" data-t="cennik_uwaga">Cena jest orientacyjna. Aktualną cenę potwierdzamy po ustaleniu terminu i liczby osób.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- 8. DOJAZD -->
-<section class="access" id="dojazd" aria-labelledby="ac-h">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Dojazd</span>
-      <h2 class="h2" id="ac-h">Jak do nas trafić</h2>
+<section class="cta-band" aria-labelledby="cta-h">
+  <div class="wrap cta-inner">
+    <div>
+      <h2 class="h2" id="cta-h">Zapytaj o wolny termin</h2>
+      <p>Prosimy o podanie terminu i liczby osób. Odpowiemy, czy dom jest wolny, i podamy cenę.</p>
     </div>
-    <div class="access-grid">
-      <div class="map reveal">
-        <iframe title="Mapa OpenStreetMap z lokalizacją Dom w górach, ul. Kilińskiego 4, Świeradów-Zdrój" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=15.3299%2C50.8947%2C15.3521%2C50.9047&amp;layer=mapnik&amp;marker=50.89970%2C15.34099"></iframe>
-      </div>
-      <div class="reveal">
-        <p class="addr">Dom w górach<br>ul. Kilińskiego 4<br>59-850 Świeradów-Zdrój</p>
-        <ul class="how">
-          <li><b>Samochodem.</b> Do granicy posesji można dojechać samochodem osobowym drogą asfaltową. Parking jest na ogrodzonej posesji.</li>
-          <li><b>Cisza.</b> Dom stoi około 300 m od ul. Leśnej, z dala od ruchu samochodowego.</li>
-          <li><b>Pytania o dojazd.</b> W razie wątpliwości prosimy o telefon pod numerem 572 504 297.</li>
-        </ul>
-        <p style="margin-top:22px"><a class="text-link" href="https://www.openstreetmap.org/?mlat=50.89970&amp;mlon=15.34099#map=16/50.89970/15.34099" target="_blank" rel="noopener">Otwórz większą mapę</a></p>
-      </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="kontakt.html">Napisz zapytanie</a>
+      <a class="btn btn-ghost" href="tel:+48572504297" data-tel>Zadzwoń: <span data-t="telefon">572 504 297</span></a>
     </div>
   </div>
 </section>
-
-<!-- 9. KONTAKT -->
-<section class="contact" id="kontakt" aria-labelledby="co-h">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Kontakt</span>
-      <h2 class="h2" id="co-h">Zapytaj o wolny termin</h2>
-      <p class="lead" style="margin-top:20px">Prosimy o podanie terminu i liczby osób. Odpowiemy, czy dom jest wolny, i podamy cenę.</p>
-      <dl class="c-list">
-        <div><dt>Telefon</dt><dd><a href="tel:+48572504297">572 504 297</a></dd></div>
-        <div><dt>E-mail</dt><dd><a href="mailto:dom.wgorach.swieradow@gmail.com">dom.wgorach.swieradow@gmail.com</a></dd></div>
-        <div><dt>Adres</dt><dd>ul. Kilińskiego 4, 59-850 Świeradów-Zdrój</dd></div>
-      </dl>
-      <p class="c-reg">Obiekt wpisany do Ewidencji Obiektów Świadczących Usługi Hotelarskie gminy Świeradów-Zdrój pod numerem 69 z dnia 3 lutego 2009 r., pod nazwą „Pokoje gościnne Dom w górach”.</p>
-    </div>
-    <form class="form reveal" id="inquiry" novalidate aria-labelledby="form-h">
-      <h3 id="form-h">Zapytanie o pobyt</h3>
-      <div class="row2">
-        <div class="field"><label for="od">Przyjazd</label><input type="date" id="od" name="od"></div>
-        <div class="field"><label for="do">Wyjazd</label><input type="date" id="do" name="do"></div>
-      </div>
-      <div class="field"><label for="osoby">Liczba osób</label><input type="number" id="osoby" name="osoby" min="1" max="15" inputmode="numeric" placeholder="np. 8"></div>
-      <div class="row2">
-        <div class="field"><label for="imie">Imię i nazwisko</label><input type="text" id="imie" name="imie" autocomplete="name" required></div>
-        <div class="field"><label for="email">Adres e-mail</label><input type="email" id="email" name="email" autocomplete="email" required></div>
-      </div>
-      <div class="field"><label for="wiadomosc">Wiadomość</label><textarea id="wiadomosc" name="wiadomosc" rows="4" placeholder="Np. czy podróżują Państwo ze zwierzęciem, czy interesują Państwa posiłki."></textarea></div>
-      <p class="form-msg" role="status" aria-live="polite"></p>
-      <button class="btn btn-primary" type="submit">Przygotuj wiadomość e-mail</button>
-    </form>
-  </div>
-</section>
-
 </main>
 
 <footer class="footer">
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <a class="brand" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 26 11 10l5 8 3-4 11 12z" fill="currentColor" opacity=".9"/><path d="M13 26v-6h6v6z" fill="#a8622f"/></svg><span>Dom w górach</span></a>
-        <p>Dom do wynajęcia w Świeradowie-Zdroju, w Górach Izerskich.</p>
+        <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 26 11 10l5 8 3-4 11 12z" fill="currentColor" opacity=".9"/><path d="M13 26v-6h6v6z" fill="#a8622f"/></svg><span>Dom w górach</span></a>
+        <p data-t="stopka_opis">Dom do wynajęcia w Świeradowie-Zdroju, w Górach Izerskich.</p>
       </div>
       <div>
         <h3>Kontakt</h3>
-        <p>ul. Kilińskiego 4<br>59-850 Świeradów-Zdrój</p>
-        <p>tel. <a href="tel:+48572504297">572 504 297</a></p>
-        <p><a href="mailto:dom.wgorach.swieradow@gmail.com">dom.wgorach.swieradow@gmail.com</a></p>
+        <p><span data-t="adres_ulica">ul. Kilińskiego 4</span><br><span data-t="adres_miasto">59-850 Świeradów-Zdrój</span></p>
+        <p>tel. <a href="tel:+48572504297" data-tel data-t="telefon">572 504 297</a></p>
+        <p><a href="mailto:dom.wgorach.swieradow@gmail.com" data-mail data-t="email">dom.wgorach.swieradow@gmail.com</a></p>
       </div>
       <div>
         <h3>Na stronie</h3>
-        <ul>
-          <li><a href="#pokoje">Pokoje</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#okolica">Okolica</a></li>
-          <li><a href="#cennik">Cennik</a></li>
-          <li><a href="#dojazd">Dojazd</a></li>
-        </ul>
+        <ul><li><a href="pokoje.html">Pokoje</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="cennik.html">Cennik</a></li><li><a href="dojazd.html">Dojazd</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
       </div>
     </div>
-    <p class="f-bottom">Dom w górach, Świeradów-Zdrój. Ewidencja obiektów hotelarskich gminy Świeradów-Zdrój, nr 69.</p>
+    <p class="f-bottom" data-t="stopka_ewidencja">Dom w górach, Świeradów-Zdrój. Ewidencja obiektów hotelarskich gminy Świeradów-Zdrój, nr 69.</p>
   </div>
 </footer>
 
@@ -426,5 +196,6 @@
 </div>
 
 <script src="script.js" defer></script>
+<script src="content.js" defer></script>
 </body>
 </html>
