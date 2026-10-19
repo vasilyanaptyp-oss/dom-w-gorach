@@ -12,7 +12,7 @@
 (function () {
   'use strict';
 
-  var SHEET_ID = '';
+  var SHEET_ID = '1-SfNo4BE6bJQv_GhL6u7OThA89xyVGPRwGUYIOIWbMc';
 
   var TABS = { teksty: 'Teksty', pokoje: 'Pokoje', cennik: 'Cennik', galeria: 'Galeria' };
   var TIMEOUT_MS = 8000;
