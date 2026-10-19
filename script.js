@@ -54,6 +54,7 @@
       function fail() {
         var fb = img.getAttribute('data-fallback');
         if (fb && img.getAttribute('data-fb-used') !== '1') {
+          img.dispatchEvent(new CustomEvent('dwg:imgfallback', { bubbles: true }));
           img.setAttribute('data-fb-used', '1');
           img.setAttribute('src', fb);
           return;

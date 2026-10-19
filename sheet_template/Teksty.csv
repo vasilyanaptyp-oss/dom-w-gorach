@@ -1,0 +1,79 @@
+klucz,wartosc
+telefon,572 504 297
+email,dom.wgorach.swieradow@gmail.com
+kontakt_tytul,Zapytaj o wolny termin
+kontakt_tekst,"Prosimy o podanie terminu i liczby osób. Odpowiemy, czy dom jest wolny, i podamy cenę."
+adres_ulica,ul. Kilińskiego 4
+adres_miasto,59-850 Świeradów-Zdrój
+ewidencja,"Obiekt wpisany do Ewidencji Obiektów Świadczących Usługi Hotelarskie gminy Świeradów-Zdrój pod numerem 69 z dnia 3 lutego 2009 r., pod nazwą „Pokoje gościnne Dom w górach”."
+stopka_opis,"Dom do wynajęcia w Świeradowie-Zdroju, w Górach Izerskich."
+stopka_ewidencja,"Dom w górach, Świeradów-Zdrój. Ewidencja obiektów hotelarskich gminy Świeradów-Zdrój, nr 69."
+galeria_tytul,Zajrzyjmy do środka
+galeria_tekst,"Dom, wnętrza i okolica. Kliknięcie otwiera zdjęcie w większym rozmiarze."
+dojazd_tytul,Jak do nas trafić
+okolica_tytul,Uzdrowisko u stóp Gór Izerskich
+okolica_tekst,"Świeradów-Zdrój wraz z Czerniawą to uzdrowisko znane z kąpieli borowinowych i wód radoczynnych, a zarazem dobre miejsce na wypoczynek latem i zimą."
+odleglosci_uwaga,"Odległości orientacyjne, w linii prostej."
+zdrojowy_podpis,Dom Zdrojowy w Świeradowie-Zdroju
+czechy,"Blisko jest także do Czech: do Pragi, Skalnego Miasta, aquaparku i kina 3D w Libercu oraz zamku we Frydlancie."
+lato_tekst,"Szlaki rowerowe i turystyczne w Górach Izerskich, lasy pełne grzybów i jagód, a do tego uzdrowiskowe kąpiele borowinowe i wody mineralne. We wrześniu słychać rykowisko jeleni, czasem nawet w domu."
+zima_tekst,Trasy zjazdowe z koleją gondolową oraz trasy biegowe na miejscu i w niedalekich Jakuszycach.
+zdrojowy_foto,img/dom-zdrojowy.webp
+lato_foto,img/laka-latem.webp
+zima_foto,img/zima-droga.webp
+dojazd_1,Samochodem | Do granicy posesji można dojechać samochodem osobowym drogą asfaltową. Parking jest na ogrodzonej posesji.
+dojazd_2,"Cisza | Dom stoi około 300 m od ul. Leśnej, z dala od ruchu samochodowego."
+dojazd_3,"Nawigacja | Adres do wpisania w nawigację: ul. Kilińskiego 4, Świeradów-Zdrój. Współrzędne punktu na mapie: 50,89970 N, 15,34099 E."
+odleglosc_1,Wieża widokowa Sky Walk | Świeradów-Zdrój | ok. 300 m
+odleglosc_2,Aquapark | Świeradów-Zdrój | ok. 500 m
+odleglosc_3,"Dom Zdrojowy i Park Zdrojowy | Zabytkowy Dom Zdrojowy z 1899 roku | ok. 0,9 km"
+odleglosc_4,"Dolna stacja kolei gondolowej | Ski & Sun, kolej gondolowa na Stóg Izerski | ok. 1,9 km"
+odleglosc_5,Zamek Czocha w Leśnej | nad zalewem z plażą i wypożyczalnią sprzętu pływającego | ok. 15 km
+cennik_tytul,Ile kosztuje pobyt
+cennik_uwaga,Cena jest orientacyjna. Aktualną cenę potwierdzamy po ustaleniu terminu i liczby osób.
+pokoje_tytul,"Cztery pokoje na piętrze, salon z kominkiem i duża kuchnia"
+pokoje_tekst,"Dom jest przeznaczony dla grup. Na parterze jest salon z kominkiem, w którym opcjonalnie można urządzić dodatkowe trzy miejsca noclegowe. Jeśli nie potrzebują Państwo całego domu, prosimy zapytać o wynajem pojedynczych pokoi."
+udog1_tytul,Kominki
+udog1_tekst,Salon z kominkiem na parterze oraz kominek w jednym z pokoi na piętrze.
+udog2_tytul,W pełni wyposażona kuchnia
+udog2_tekst,"Przestronna kuchnia na parterze z dużym stołem, w której można samodzielnie przygotować posiłki."
+udog3_tytul,Parking
+udog3_tekst,Parking na ogrodzonej posesji.
+udog4_tytul,Ogród i miejsce na grilla
+udog4_tekst,Ogrodzona posesja z ogrodem i miejscem do grillowania.
+udog5_tytul,Łazienki
+udog5_tekst,"Prysznic na parterze, prywatna łazienka przy pokoju z kominkiem oraz łazienka dostępna z korytarza na piętrze."
+udog6_tytul,Śniadania i obiadokolacje
+udog6_tekst,Śniadania i obiadokolacje można wykupić po wcześniejszym ustaleniu.
+udog7_tytul,Zwierzęta akceptowane
+udog7_tekst,Prosimy o sprzątanie po pupilach i niewpuszczanie ich na łóżka i fotele. Za pobyt ze zwierzęciem pobieramy jednorazową opłatę ustalaną indywidualnie.
+udog8_tytul,Gospodarz na miejscu
+udog8_tekst,"W domu mieszka gospodarz, którego można poprosić o pomoc. Właściciele nie są obecni w trakcie pobytu gości."
+udog9_tytul,Szlaki w sąsiedztwie
+udog9_tekst,"Dom stoi przy lesie, w sąsiedztwie szlaków turystycznych i ścieżek rowerowych Singletrack."
+zasada_1,"W domu obowiązuje całkowity zakaz palenia tytoniu, zainstalowane są czujniki dymu."
+zasada_2,Cisza nocna obowiązuje w godzinach 22:00 do 06:00.
+zasada_3,Prosimy o zapoznanie się z instrukcją palenia w kominku. Zimą sień nie jest ogrzewana.
+zasada_4,Przy wynajmie pojedynczych pokoi prosimy o uwzględnienie potrzeb innych gości w kuchni i łazience.
+hero_eyebrow,"Świeradów-Zdrój, Góry Izerskie"
+hero_title,"Dom na zboczu,"
+hero_title_em,tuż przy lesie
+hero_text,"Dom do wynajęcia dla rodzin i grup przyjaciół: kominek, duża kuchnia, ogród z miejscem do grillowania, a w sąsiedztwie szlaki piesze i rowerowe."
+fakt1_wartosc,do 15
+fakt1_opis,osób w domu
+fakt2_wartosc,ok. 215 m²
+fakt2_opis,powierzchni
+fakt3_wartosc,ok. 300 m
+fakt3_opis,do wieży Sky Walk
+o_domu_tytul,"Dom, w którym całe towarzystwo mieści się pod jednym dachem"
+o_domu_tekst,"Dom pomyślany jako miejsce wypoczynku dla grup, czyli dwóch lub trzech rodzin albo przyjaciół, a także dla gości, którzy wolą wypocząć w mniejszym gronie. Stoi na zboczu, w sąsiedztwie lasu, z dala od ruchu samochodowego."
+hero_foto,img/widok-wzgorza.webp
+o_domu_foto,img/dom-od-ogrodu.webp
+o_domu_foto2,img/pokoj-z-piecem-1.webp
+cecha_1,"Dom | około 215 m², parter i piętro, łóżka dla maksymalnie 15 osób"
+cecha_2,"Spokój | zbocze przy lesie, z dala od ruchu samochodowego, dobre miejsce także na pobyt z dziećmi"
+cecha_3,Szlaki | szlaki turystyczne i ścieżki rowerowe Singletrack w sąsiedztwie domu
+cecha_4,"Opieka | domem opiekuje się gospodarz, który mieszka na parterze i w razie potrzeby można go poprosić o pomoc"
+cecha_5,"Zwierzęta | akceptujemy zwierzęta, za pobyt z pupilem pobieramy jednorazową opłatę ustalaną indywidualnie"
+max_osob,15
+tlo_foto,

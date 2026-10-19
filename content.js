@@ -32,6 +32,25 @@
     if (ts && /^[\w-]{3,}$/.test(ts)) sheetId = ts;
   }
   var debug = params.has('dwg_debug');
+  var status = { tabs: {}, warnings: [] };
+  window.DWG = window.DWG || {};
+  window.DWG.contentStatus = status;
+  function report() {
+    if (!debug) return;
+    var panel = doc.getElementById('dwg-status');
+    if (!panel) {
+      panel = doc.createElement('aside'); panel.id = 'dwg-status';
+      panel.setAttribute('role', 'status');
+      panel.style.cssText = 'position:fixed;bottom:12px;left:12px;right:12px;z-index:9999;background:white;color:#222;padding:16px;border:2px solid #555;max-height:35vh;overflow:auto;font:14px sans-serif';
+      doc.body.appendChild(panel);
+    }
+    panel.textContent = 'Google Sheets: ' + Object.keys(status.tabs).map(function (k) {
+      var t = status.tabs[k]; return TABS[k] + ': ' + t.source + (t.error ? ' (' + t.error + ')' : '');
+    }).join('; ') + (status.warnings.length ? ' | ' + status.warnings.join(' | ') : '');
+  }
+  function warn(message) { if (status.warnings.indexOf(message) < 0) status.warnings.push(message); report(); }
+  doc.addEventListener('dwg:imgfail', function () { warn('Zdjęcie niedostępne: sprawdź link i publiczny dostęp.'); });
+  doc.addEventListener('dwg:imgfallback', function () { warn('Nie udało się wczytać nowego zdjęcia; wyświetlono stare zdjęcie.'); });
   if (!sheetId && !testBase) return;
 
   function log() { if (debug && window.console) console.info.apply(console, ['[dwg]'].concat([].slice.call(arguments))); }
@@ -69,6 +88,7 @@
         row.push(cur); cur = ''; rows.push(row); row = [];
       } else { cur += c; }
     }
+    if (q) throw new Error('Unclosed CSV quote');
     if (cur !== '' || row.length) { row.push(cur); rows.push(row); }
     return rows;
   }
@@ -85,9 +105,9 @@
   };
   var SCHEMAS = {
     teksty: { cols: ['key', 'value'], need: ['key', 'value'] },
-    pokoje: { cols: ['name', 'description', 'beds', 'photo_url'], need: ['name'] },
-    cennik: { cols: ['item', 'price', 'note'], need: ['item'] },
-    galeria: { cols: ['photo_url', 'caption', 'order'], need: ['photo_url'] }
+    pokoje: { cols: ['name', 'description', 'beds', 'photo_url'], need: ['name', 'description', 'beds', 'photo_url'] },
+    cennik: { cols: ['item', 'price', 'note'], need: ['item', 'price', 'note'] },
+    galeria: { cols: ['photo_url', 'caption', 'order'], need: ['photo_url', 'caption', 'order'] }
   };
 
   /* csv text -> array of objects, or null when the header does not match the tab (wrong sheet, login page...) */
@@ -126,7 +146,12 @@
     var m = v.match(/^https:\/\/drive\.google\.com\/file\/d\/([\w-]{10,})/) ||
       v.match(/^https:\/\/drive\.google\.com\/(?:open|uc|thumbnail)\?(?:[^#]*&)?id=([\w-]{10,})/) ||
       v.match(/^https:\/\/docs\.google\.com\/uc\?(?:[^#]*&)?id=([\w-]{10,})/);
-    if (m) return 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w1600';
+    if (m) {
+      var resourceKey = new URL(v).searchParams.get('resourcekey');
+      return 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w1600' +
+        (resourceKey ? '&resourcekey=' + encodeURIComponent(resourceKey) : '');
+    }
+    if (/^https:\/\/(drive|docs)\.google\.com\//.test(v)) return '';
     if (/^https:\/\/[^\/]+\/.+/.test(v) && !/\/drive\/folders\//.test(v)) return v;
     if (/^img\/[\w\-.\/]+$/.test(v) && v.indexOf('..') < 0) return v;
     if (isLocal && /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?\//.test(v)) return v;
@@ -137,7 +162,7 @@
   function phoneHref(v) {
     var s = String(v || '').trim();
     var d = s.replace(/\D/g, '');
-    if (d.length < 7) return '';
+    if (!/^\+?[\d\s().-]+$/.test(s) || d.length < 7 || d.length > 15) return '';
     if (s.charAt(0) === '+') return 'tel:+' + d;
     if (d.length === 9) return 'tel:+48' + d;
     if (d.length === 11 && d.indexOf('48') === 0) return 'tel:+' + d;
@@ -396,9 +421,22 @@
   function applyAll(data) {
     var map = null;
     if (data.teksty) {
-      map = {};
+      map = Object.create(null);
       data.teksty.forEach(function (r) { var k = String(r.key || '').toLowerCase().trim(); if (k && r.value) map[k] = r.value; });
     }
+    if (map) {
+      if (map.telefon && !phoneHref(map.telefon)) { warn('Niepoprawny telefon: zachowano poprzedni numer.'); delete map.telefon; }
+      if (map.email && !/^[^@\s,;<>"'?&#%]+@[^@\s,;<>"'?&#%]+\.[^@\s,;<>"'?&#%]+$/.test(map.email)) { warn('Niepoprawny e-mail: zachowano poprzedni adres.'); delete map.email; }
+      Object.keys(map).forEach(function (k) { if (/_foto\d*$/.test(k) && map[k] && !photoUrl(map[k])) warn('Niepoprawny link zdjęcia: ' + k); });
+    }
+    ['pokoje', 'galeria'].forEach(function (key) {
+      if (data[key]) data[key].forEach(function (r, i) {
+        if (r.photo_url && !photoUrl(r.photo_url)) warn(TABS[key] + ', wiersz ' + (i + 2) + ': niepoprawny link zdjęcia.');
+      });
+    });
+    Object.keys(TABS).forEach(function (key) {
+      if (data[key] && !data[key].length) warn(TABS[key] + ': brak danych; pozostaje treść wbudowana.');
+    });
     [
       function () { applyTexts(map); },
       function () { applyImgs(map); },
@@ -407,7 +445,7 @@
       function () { applyRooms(data.pokoje); },
       function () { applyCennik(data.cennik); },
       function () { applyGallery(data.galeria); }
-    ].forEach(function (fn) { try { fn(); } catch (e) { log('apply error', e); } });
+    ].forEach(function (fn) { try { fn(); } catch (e) { log('apply error', e); warn('Błąd wyświetlania danych.'); } });
     if (window.DWG && window.DWG.refresh) window.DWG.refresh();
   }
 
@@ -433,19 +471,24 @@
     var shown = haveCache ? sig(cached) : null;
     if (haveCache) { log('applying cached content'); applyAll(convert(cached)); }
 
-    var fresh = {}, left = Object.keys(TABS).length;
+    var fresh = {}, errors = {}, left = Object.keys(TABS).length;
     Object.keys(TABS).forEach(function (k) {
       fetchText(tabUrl(TABS[k])).then(function (txt) {
         fresh[k] = txt; log('loaded', TABS[k], txt.length);
-      }, function (err) { fresh[k] = null; log('failed', TABS[k], err && err.message); })
+      }, function (err) { fresh[k] = null; errors[k] = err && err.message; log('failed', TABS[k], err && err.message); })
         .then(function () {
           left -= 1;
           if (left > 0) return;
           var finalRaw = {};
           Object.keys(TABS).forEach(function (kk) {
             if (fresh[kk] != null && toObjects(fresh[kk], kk)) { finalRaw[kk] = fresh[kk]; cacheSet(TABS[kk], fresh[kk]); }
-            else { finalRaw[kk] = cached[kk]; }   /* unreachable or wrong sheet: keep what we had (cache) or the built-in content */
+            else { finalRaw[kk] = cached[kk]; }
+            status.tabs[kk] = {
+              source: fresh[kk] != null && toObjects(fresh[kk], kk) ? 'aktualne dane' : (cached[kk] != null ? 'pamięć przeglądarki' : 'treść wbudowana'),
+              error: errors[kk] || (fresh[kk] != null && !toObjects(fresh[kk], kk) ? 'niepoprawne nagłówki lub CSV' : '')
+            };   /* unreachable or wrong sheet: keep what we had (cache) or the built-in content */
           });
+          report();
           var s = sig(finalRaw);
           if (s !== shown) { applyAll(convert(finalRaw)); log('content applied'); }
         });
